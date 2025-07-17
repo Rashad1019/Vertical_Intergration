@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Integration: Strategic Business Approach</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            overflow-x: hidden;
+        }
+        
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(139, 69, 194, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 69, 194, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .circle {
+            border-radius: 50%;
+            position: absolute;
+            pointer-events: none;
+        }
+        
+        .circle-black {
+            background: #000000;
+        }
+        
+        .circle-white {
+            background: #ffffff;
+            border: 2px solid #000000;
+        }
+        
+        .circle-purple {
+            background: #8b45c2;
+        }
+        
+        .circle-gray {
+            background: #6b7280;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-title {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+        }
+        
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #000000;
+            box-shadow: 8px 8px 0px #000000;
+            transition: all 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 12px 12px 0px #000000;
+        }
+        
+        .purple-accent {
+            color: #8b45c2;
+        }
+        
+        .purple-bg {
+            background: #8b45c2;
+        }
+        
+        .benefit-item, .drawback-item {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #000000;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: #8b45c2;
+        }
+        
+        .drawback-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: #000000;
+        }
+        
+        .example-card {
+            background: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .example-card::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            background: #8b45c2;
+            border-radius: 50%;
+        }
+        
+        .floating-circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .main-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .floating-circles {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="floating-circles">
+        <div class="circle circle-black" style="width: 80px; height: 80px; top: 10%; left: 15%;"></div>
+        <div class="circle circle-white" style="width: 60px; height: 60px; top: 5%; right: 20%;"></div>
+        <div class="circle circle-purple" style="width: 100px; height: 100px; top: 25%; left: 5%;"></div>
+        <div class="circle circle-gray" style="width: 40px; height: 40px; top: 15%; right: 10%;"></div>
+        <div class="circle circle-black" style="width: 120px; height: 120px; top: 40%; right: 15%;"></div>
+        <div class="circle circle-white" style="width: 70px; height: 70px; top: 45%; left: 10%;"></div>
+        <div class="circle circle-purple" style="width: 90px; height: 90px; top: 65%; right: 25%;"></div>
+        <div class="circle circle-gray" style="width: 50px; height: 50px; top: 70%; left: 20%;"></div>
+        <div class="circle circle-black" style="width: 60px; height: 60px; top: 80%; right: 5%;"></div>
+        <div class="circle circle-white" style="width: 80px; height: 80px; top: 85%; left: 15%;"></div>
+    </div>
+
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center px-4 grid-bg relative">
+            <div class="max-w-6xl w-full text-center">
+                <div class="hero-title text-black mb-8">
+                    VERTICAL<br>
+                    <span class="purple-accent">INTEGRATION</span>
+                </div>
+                <div class="text-2xl md:text-4xl font-bold text-gray-800 mb-8">
+                    STRATEGIC BUSINESS APPROACH
+                </div>
+                <div class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 font-medium">
+                    A strategic approach where companies extend operations across multiple stages of their supply chain or production process, providing greater control over operations.
+                </div>
+            </div>
+        </section>
+
+        <!-- Definition Section -->
+        <section class="py-16 px-4 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="content-card p-8 md:p-12 mb-12">
+                    <h2 class="section-title text-black mb-8">WHAT IS VERTICAL INTEGRATION?</h2>
+                    <div class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                        Vertical integration is a strategic approach in which a company extends its operations across multiple stages of its supply chain or production process. This contrasts with relying solely on external suppliers or distributors, providing a business greater control over its operations.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Types Section -->
+        <section class="py-16 px-4 grid-bg">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-title text-black mb-12 text-center">TYPES OF INTEGRATION</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="content-card p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-8 h-8 purple-bg rounded-full mr-4"></div>
+                            <h3 class="text-2xl font-bold text-black">BACKWARD INTEGRATION</h3>
+                        </div>
+                        <p class="text-gray-700 mb-6 text-lg">
+                            Involves acquiring or managing suppliers earlier (upstream) in the supply chain.
+                        </p>
+                        <div class="bg-gray-100 p-4 border-l-4 border-black">
+                            <strong class="text-black">Example:</strong> An automobile manufacturer purchasing a steel production plant or a tire manufacturer to ensure direct control over essential inputs.
+                        </div>
+                    </div>
+                    
+                    <div class="content-card p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-8 h-8 bg-black rounded-full mr-4"></div>
+                            <h3 class="text-2xl font-bold text-black">FORWARD INTEGRATION</h3>
+                        </div>
+                        <p class="text-gray-700 mb-6 text-lg">
+                            Focuses on controlling distribution channels later (downstream) in the supply chain.
+                        </p>
+                        <div class="bg-gray-100 p-4 border-l-4 border-purple-500">
+                            <strong class="text-black">Example:</strong> A clothing brand opening proprietary retail outlets to directly sell to consumers instead of relying on third-party retailers.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-16 px-4 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-title text-black mb-12 text-center">BENEFITS</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="benefit-item">
+                        <h3 class="text-xl font-bold text-black mb-3">COST REDUCTION</h3>
+                        <p class="text-gray-700">Eliminates intermediary markups and reduces operational expenses.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <h3 class="text-xl font-bold text-black mb-3">ENHANCED QUALITY & CONTROL</h3>
+                        <p class="text-gray-700">Provides direct oversight over production quality, standards, and timing.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <h3 class="text-xl font-bold text-black mb-3">SUPPLY SECURITY</h3>
+                        <p class="text-gray-700">Ensures stable access to essential inputs or distribution channels, reducing disruptions.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <h3 class="text-xl font-bold text-black mb-3">INCREASED PROFIT MARGINS</h3>
+                        <p class="text-gray-700">Captures additional profits across various supply chain stages, enhancing overall profitability.</p>
+                    </div>
+                    
+                    <div class="benefit-item md:col-span-2">
+                        <h3 class="text-xl font-bold text-black mb-3">REDUCED DEPENDENCY</h3>
+                        <p class="text-gray-700">Decreases reliance on external vendors, mitigating risks related to supplier performance or market fluctuations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drawbacks Section -->
+        <section class="py-16 px-4 grid-bg">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-title text-black mb-12 text-center">POTENTIAL DRAWBACKS</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="drawback-item">
+                        <h3 class="text-xl font-bold text-black mb-3">HIGH CAPITAL REQUIREMENTS</h3>
+                        <p class="text-gray-700">Significant investment in infrastructure, resources, and operational capabilities.</p>
+                    </div>
+                    
+                    <div class="drawback-item">
+                        <h3 class="text-xl font-bold text-black mb-3">REDUCED FLEXIBILITY</h3>
+                        <p class="text-gray-700">Limits agility by locking the company into specific operational processes.</p>
+                    </div>
+                    
+                    <div class="drawback-item">
+                        <h3 class="text-xl font-bold text-black mb-3">OPERATIONAL INEFFICIENCIES</h3>
+                        <p class="text-gray-700">Companies may struggle if they lack expertise at every stage of the supply chain.</p>
+                    </div>
+                    
+                    <div class="drawback-item">
+                        <h3 class="text-xl font-bold text-black mb-3">ANTITRUST ISSUES</h3>
+                        <p class="text-gray-700">Potential for regulatory scrutiny if vertical integration significantly restricts market competition.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples Section -->
+        <section class="py-16 px-4 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-title text-black mb-12 text-center">NOTABLE EXAMPLES</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="example-card p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4">APPLE</h3>
+                        <p class="text-gray-300">Controls chip design, software development, hardware production, and retail sales through Apple Stores.</p>
+                    </div>
+                    
+                    <div class="example-card p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4">AMAZON</h3>
+                        <p class="text-gray-300">Manages comprehensive logistics from warehousing and inventory management to final delivery.</p>
+                    </div>
+                    
+                    <div class="example-card p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-4">FORD (HISTORICAL)</h3>
+                        <p class="text-gray-300">River Rouge Plant in the 1920s processed raw materials into finished automobiles at a single facility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alternatives Section -->
+        <section class="py-16 px-4 grid-bg">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-title text-black mb-12 text-center">ALTERNATIVES</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="content-card p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-8 h-8 bg-black rounded-full mr-4"></div>
+                            <h3 class="text-2xl font-bold text-black">HORIZONTAL INTEGRATION</h3>
+                        </div>
+                        <p class="text-gray-700 text-lg">
+                            Expansion through acquiring competitors or similar businesses at the same production stage.
+                        </p>
+                    </div>
+                    
+                    <div class="content-card p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-8 h-8 purple-bg rounded-full mr-4"></div>
+                            <h3 class="text-2xl font-bold text-black">OUTSOURCING</h3>
+                        </div>
+                        <p class="text-gray-700 text-lg">
+                            Delegating non-core activities to specialized external suppliers, allowing focus on primary competencies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="py-16 px-4 bg-black text-white">
+            <div class="max-w-6xl mx-auto text-center">
+                <div class="text-3xl md:text-5xl font-bold mb-8">
+                    STRATEGIC <span class="purple-accent">DECISION</span>
+                </div>
+                <div class="max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
+                    Vertical integration requires careful consideration of benefits versus drawbacks. Success depends on company capabilities, market conditions, and strategic objectives.
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
